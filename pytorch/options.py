@@ -5,7 +5,7 @@ def parse_args():
     Parse input arguments
     """
     parser = argparse.ArgumentParser(description='PlaneFlow')
-    
+    parser.add_argument('--checkpointDir',dest='checkpoint_dir', default='checkpoint')
     parser.add_argument('--task', dest='task',
                         help='task type: [train, test, predict]',
                         default='train', type=str)
