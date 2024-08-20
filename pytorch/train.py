@@ -166,6 +166,6 @@ if __name__ == '__main__':
     args.checkpoint_dir = 'checkpoint/' + args.keyname
     args.test_dir = 'test/' + args.keyname
 
-    print('keyname=%s task=%s started'%(args.keyname, args.task))
+    print('keyname=%s task=%s checkpoint=%s restore=%s started'%(args.keyname, args.task, args.checkpoint_dir, args.restore))
 
     main(args)
