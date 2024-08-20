@@ -8,6 +8,8 @@ from utils import NUM_WALL_CORNERS
 from options import parse_args
 from models.model import Model
 from IP import reconstructFloorplan
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 
