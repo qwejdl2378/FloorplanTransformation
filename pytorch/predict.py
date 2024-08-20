@@ -64,7 +64,7 @@ def plot_images(images):
 def main(img_path):
     options = parse_args()
     model = Model(options)
-    model.load_state_dict(torch.load('checkpoint.pth', map_location=torch.device('cpu')))
+    model.load_state_dict(torch.load('checkpoint/checkpoint.pth', map_location=torch.device('cpu')))
 
     corner_pred, icon_pred, room_pred = model(torch.tensor(load_image(img_path)))
 
@@ -103,5 +103,5 @@ if __name__ == '__main__':
     if len(sys.argv) > 1:
         img_path = sys.argv[1]
     else:
-        img_path = 'input.jpg'
+        img_path = '../demo/2222.png'
     main(img_path)
